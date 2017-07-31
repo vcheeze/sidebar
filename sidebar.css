@@ -1,0 +1,182 @@
+/* Styling for Admin page side bar */
+.sidebar {
+    overflow: auto;
+    font-family: verdana, sans-serif;
+    font-weight: 200;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 300px;
+    height: 100%;
+}
+
+.sidebar li:before {
+    content: '';
+    position: absolute;
+    top: 5px;
+    left: 0;
+    z-index: -1;
+    height: 50px;
+    width: 30px;
+    background-color: #5ccda6;
+    -webkit-transition: width .2s ease-in;
+    -moz-transition:  width .2s ease-in;
+    -ms-transition:  width .2s ease-in;
+    transition: width .2s ease-in;
+}
+
+.sidebar li:nth-child(2):before {
+    top: 60px;
+    width: 20px;
+    margin-left: 70px;
+    background-color: #5ccda6;
+}
+
+.sidebar li:nth-child(3):before {
+    top: 115px;
+    width: 20px;
+    margin-left: 70px;
+    background-color: #5ccda6;
+}
+
+.sidebar li:nth-child(4):before {
+    top: 170px;
+    width: 20px;
+    margin-left: 70px;
+    background-color: #20567e;
+}
+
+.sidebar li:nth-child(5):before {
+    top: 225px;
+    width: 10px;
+    margin-left: 145px;
+    background-color: #20567e;
+}
+
+.sidebar li:nth-child(6):before {
+    top: 280px;
+    width: 10px;
+    margin-left: 145px;
+    background-color: #20567e;
+}
+
+.sidebar li:nth-child(7):before {
+    top: 335px;
+    background-color: #3e585e;
+}
+
+.sidebar li:nth-child(8):before {
+    top: 390px;
+    width: 20px;
+    margin-left: 70px;
+    background-color: #3e585e;
+}
+
+.sidebar li:nth-child(9):before {
+    top: 445px;
+    width: 20px;
+    margin-left: 70px;
+    background-color: #3e585e;
+}
+
+.sidebar li:nth-child(10):before {
+    top: 500px;
+    background-color: #c78535;
+}
+
+.sidebar li:nth-child(11):before {
+    top: 555px;
+    width: 20px;
+    margin-left: 70px;
+    background-color: #c78535;
+}
+
+.sidebar li:nth-child(12):before {
+    top: 610px;
+    width: 20px;
+    margin-left: 70px;
+    background-color: #c78535;
+}
+
+.sidebar li:nth-child(13):before {
+    top: 665px;
+    background-color: #fd375b;
+}
+
+.sidebar li:nth-child(14):before {
+    top: 720px;
+    width: 20px;
+    margin-left: 70px;
+    background-color: #fd375b;
+}
+
+.sidebar li:hover:before,
+.sidebar li.open:hover:before {
+    width: 100%;
+    -webkit-transition: width .2s ease-in;
+    -moz-transition: width .2s ease-in;
+    -ms-transition: width .2s ease-in;
+    transition: width .2s ease-in;
+}
+
+.sidebar li a:hover,
+.sidebar li a:active,
+.sidebar li a:focus,
+.sidebar li.open a:hover,
+.sidebar li.open a:active,
+.sidebar li.open a:focus {
+    color: #ffffff;
+}
+
+.sidebar li:hover {
+    background-color: transparent;
+    /* The transition below is optional and for effect only */
+    -webkit-transition: background-color .2s ease-in;
+    -moz-transition: background-color .2s ease-in;
+    -ms-transition: background-color .2s ease-in;
+    transition: background-color .2s ease-in;
+}
+
+.sidebar ul, .sidebar li {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    line-height: 50px;
+    cursor: pointer;
+}
+
+.sidebar li {
+    margin-left: 5px;
+    margin-top: 5px;
+    background-color: rgba(0, 0, 0, 0.85);
+    font-size: 16px;
+    text-align: center;
+}
+
+.sidebar li a {
+    text-decoration: none;
+    color: #eeeeee;
+}
+
+.sidebar .menu-item,
+.sidebar .menu-item a {
+    cursor: default;
+}
+
+.sidebar .sub-menu-item {
+    margin-left: 75px;
+    width: 225px;
+    font-size: 14px;
+}
+
+.sidebar .sub-sub-menu-item {
+    margin-left: 150px;
+    width: 150px;
+    font-size: 12px;
+}
+
+@media (min-width: 767px) {
+    .sidebar .menu-list .menu-content {
+        display: block;
+    }
+}

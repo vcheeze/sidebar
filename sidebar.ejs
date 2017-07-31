@@ -1,0 +1,63 @@
+<div class="sidebar">
+    <div class="menu-list">
+
+        <ul id="menu-content" class="menu-content">
+
+            <li class="menu-item" data-target="#new-map">
+                <a href="#">Create Map from Scratch</a>
+            </li>
+
+                <% if (permissions.addMaps) { %>
+                <li class="sub-menu-item inline"><a href="/admin/maps/new">New Map</a></li>
+                <% } %>
+
+                <% if (permissions.addFeatures) { %>
+                <li class="sub-menu-item inline"><a href="/admin/layer/new">New Layer</a></li>
+                <% } %>
+
+                <% if (permissions.addFeatures) { %>
+                <li class="sub-menu-item"><a href="/admin/add-feature-to-map">Add Feature to Map/Layer</a></li>
+                <% } %>
+
+                <% if (permissions.addMaps) { %>
+                <li class="sub-sub-menu-item"><a href="/admin/features-from-db">From DB</a></li>
+                <% } %>
+
+                <% if (permissions.addMaps) { %>
+                <li class="sub-sub-menu-item"><a href="/admin/features-from-file" >From GeoJSON File</a></li>
+                <% } %>
+
+
+            <li class="menu-item" data-target="#new-data">
+                <a href="#">Add New Data</a>
+            </li>
+
+                <% if (permissions.uploadGeojson) { %>
+                <li class="sub-menu-item"><a href="/admin/upload-geojson">Upload GeoJSON</a></li>
+                <% } %>
+
+                <% if (permissions.addFeatures) { %>
+                <li class="sub-menu-item"><a href="/admin/features/new">Add Manually</a></li>
+                <% } %>
+
+
+            <li class="menu-item" data-target="#existing">
+                <a href="#">View and Edit Existing Data</a>
+            </li>
+
+                <li class="sub-menu-item"><a href="/admin/maps">All Maps</a></li>
+                <li class="sub-menu-item"><a href="/admin/features">All Features</a></li>
+
+
+            <li class="menu-item" data-target="#admin">
+                <a href="#">Admin Functionality</a>
+            </li>
+
+                <% if (permissions.addUsers) { %>
+                <li class="sub-menu-item"><a href="/admin/add/user">Add User</a></li>
+                <% } %>
+
+        </ul>
+    </div>
+
+</div>
